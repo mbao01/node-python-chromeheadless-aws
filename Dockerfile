@@ -12,8 +12,14 @@ RUN apt-get update && apt-get install -y \
     gnupg \
     git \
     groff-base \
+    python3.7 \
+    python3-pip \
     build-essential \
     --no-install-recommends
+
+# Link python3.7 to python3 and ensure /usr/local/bin is before /usr/bin in PATH
+RUN update-alternatives --install /usr/local/bin/python3 python3 /usr/bin/python3.7 1 && \
+    export PATH=/usr/local/bin:$PATH
 
 # Install aws cli
 RUN pip install --upgrade pip setuptools
