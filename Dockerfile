@@ -22,7 +22,7 @@ RUN update-alternatives --install /usr/local/bin/python3 python3 /usr/bin/python
     export PATH=/usr/local/bin:$PATH
 
 # Install aws cli
-RUN pip3 install --upgrade pip3 setuptools
+RUN pip3 install --upgrade setuptools
 RUN pip3 install --upgrade awscli
 
 # Get Chrome sources
