@@ -12,8 +12,9 @@ RUN apt-get update && apt-get install -y \
     gnupg \
     git \
     groff-base \
-    python3.7 \
     python3-pip \
+    python3.7 \
+    python3.7-dev \
     build-essential \
     --no-install-recommends
 
