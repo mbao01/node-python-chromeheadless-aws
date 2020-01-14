@@ -22,8 +22,8 @@ RUN update-alternatives --install /usr/local/bin/python3 python3 /usr/bin/python
     export PATH=/usr/local/bin:$PATH
 
 # Install aws cli
-RUN pip install --upgrade pip setuptools
-RUN pip install --upgrade awscli
+RUN pip3 install --upgrade pip3 setuptools
+RUN pip3 install --upgrade awscli
 
 # Get Chrome sources
 RUN curl -sSL https://dl.google.com/linux/linux_signing_key.pub | apt-key add - \
